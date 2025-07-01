@@ -6,6 +6,7 @@ import logo from "@/logo/logo.png";
 import Image from "next/image";
 import { HEADERLINKS } from "@/assets/headerLinks";
 import { useRouter } from "next/router";
+import logo1 from '@/logo/logo_techx.png'
 const Header = () => {
   const router = useRouter();
   const handleRouter = (url: string) => {
@@ -27,17 +28,13 @@ const Header = () => {
           padding: "25px",
           color: COLORS.WHITE,
           paddingLeft: "25px",
-          // position: "absolute",
-          // width: "90%",
-          // margin: "auto",
-          // top: 40,
-          // marginTop: "25px",
+          
         }}
       >
         <Image
-          src={logo}
+          src={logo1}
           alt="logo"
-          width={200}
+          width={250}
           style={{ backgroundColor: COLORS.TRANSPARENT }}
         />
         <Stack

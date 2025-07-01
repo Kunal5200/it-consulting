@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import banner from "@/homePage/home_banner.png";
+import banner from "@/homePage/home_banner2.png";
 import { COLORS } from "@/utils/enum";
 import { ArrowForward } from "@mui/icons-material";
 const Banner = () => {

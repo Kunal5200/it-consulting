@@ -23,3 +23,11 @@ export interface SERVICE_DETAILS {
   serviceTitle: string;
   index: string;
 }
+
+export interface WHO_CARD_PROPS {
+  img: StaticImport;
+  description: string;
+  reverse?: boolean;
+  title?: string | undefined;
+  subTitle?: string | undefined;
+}

@@ -18,7 +18,7 @@ export const Service_data: SERVICE_DETAILS[] = [
   },
   {
     img: service3,
-    serviceTitle: "Mobile App Development",
+    serviceTitle: "AI/ML Development",
     index: "03",
   },
   {
