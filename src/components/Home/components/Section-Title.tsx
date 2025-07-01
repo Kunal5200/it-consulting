@@ -1,22 +1,48 @@
 import { COLORS } from "@/utils/enum";
-import { Box, Divider, Typography } from "@mui/material";
+import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 import React from "react";
 
-const SectionTitle = ({ sectionTitle }: { sectionTitle: string }) => {
+const SectionTitle = ({
+  sectionTitle,
+  hasButton,
+  onClick,
+}: {
+  sectionTitle: string;
+  hasButton?: boolean;
+  onClick?: () => void;
+}) => {
   return (
     <Box>
-      <Typography
-        sx={{
-          textTransform: "uppercase",
-          marginTop: 0,
-          fontSize: 80,
-          fontWeight: 800,
-          lineHeight: "50px",
-          color: COLORS.WHITE,
-        }}
+      <Stack
+        direction={"row"}
+        alignItems={"center"}
+        justifyContent={"space-between"}
       >
-        {sectionTitle}
-      </Typography>
+        <Typography
+          sx={{
+            textTransform: "uppercase",
+            marginTop: 0,
+            fontSize: 80,
+            fontWeight: 800,
+            lineHeight: "50px",
+            color: COLORS.WHITE,
+          }}
+        >
+          {sectionTitle}
+        </Typography>
+        {hasButton && (
+          <Button
+            sx={{
+              fontFamily: "clash-display",
+              color: COLORS.WHITE,
+              fontSize: 18,
+            }}
+            onClick={onClick}
+          >
+            All Projects
+          </Button>
+        )}
+      </Stack>
       <Divider sx={{ borderColor: COLORS.PRIMARY, mt: 1 }} />
     </Box>
   );

@@ -9,6 +9,7 @@ import { COLORS } from "@/utils/enum";
 import { NUMBER_CARD } from "@/assets/numbercard";
 import Services from "@/components/Home/services/Index";
 import WhoWeAre from "@/components/Home/Who-we-are/Index";
+import Work from "@/components/Home/Work";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,6 +49,7 @@ export default function Home() {
         </Container>
         <Services />
         <WhoWeAre />
+        <Work />
       </Box>
     </>
   );
