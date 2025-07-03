@@ -1,9 +1,7 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
-import React from "react";
-import mission from "@/homePage/mission.jpg";
-import Image from "next/image";
 import { COLORS } from "@/utils/enum";
 import { WHO_CARD_PROPS } from "@/utils/types";
+import { Box, Grid, Stack, Typography } from "@mui/material";
+import Image from "next/image";
 const WhoCard = ({ reverse, description, img }: WHO_CARD_PROPS) => {
   return (
     <Box
@@ -19,7 +17,7 @@ const WhoCard = ({ reverse, description, img }: WHO_CARD_PROPS) => {
           width: "200%",
           height: "200%",
           background:
-            "linear-gradient(120deg, transparent, rgba(129, 219, 73, 0.2) , transparent)",
+            "linear-gradient(120deg, transparent,rgba(65, 105, 225, 0.31) , transparent)",
           transform: "rotate(25deg)",
           transition: "all 0.5s ease",
           zIndex: 1,
@@ -40,7 +38,11 @@ const WhoCard = ({ reverse, description, img }: WHO_CARD_PROPS) => {
         alignItems: "center",
       }}
     >
-      <Grid container flexDirection={reverse ? "row-reverse" : "row"} spacing={2} >
+      <Grid
+        container
+        flexDirection={reverse ? "row-reverse" : "row"}
+        spacing={2}
+      >
         <Grid size={7}>
           <Stack flexDirection={reverse ? "column-reverse" : "column"}>
             <Typography

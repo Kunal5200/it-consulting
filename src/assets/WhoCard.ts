@@ -1,6 +1,9 @@
-import { WHO_CARD_PROPS } from "@/utils/types";
+import { WHO_CARD_PROPS, WORK_CARD_PROPS } from "@/utils/types";
 import mission from "@/homePage/mission.jpg";
 import vision from "@/homePage/vision.jpg";
+import work1 from "@/homePage/work/img1.png";
+import work2 from "@/homePage/work/img2.png";
+import work3 from "@/homePage/work/img3.png";
 export const WHO_CARD_DATA: WHO_CARD_PROPS[] = [
   {
     img: mission,
@@ -16,5 +19,20 @@ export const WHO_CARD_DATA: WHO_CARD_PROPS[] = [
     reverse: true,
     title: "Our",
     subTitle: "Vision",
+  },
+];
+
+export const WORK_CARD_DATA: WORK_CARD_PROPS[] = [
+  {
+    img: work1,
+    heading: "Insigne",
+  },
+  {
+    img: work2,
+    heading: "Logico",
+  },
+  {
+    img: work3,
+    heading: "Nightwish",
   },
 ];

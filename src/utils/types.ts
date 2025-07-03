@@ -31,3 +31,8 @@ export interface WHO_CARD_PROPS {
   title?: string | undefined;
   subTitle?: string | undefined;
 }
+
+export interface WORK_CARD_PROPS {
+  img: StaticImport;
+  heading: string;
+}

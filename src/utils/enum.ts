@@ -1,7 +1,8 @@
 export enum COLORS {
   HEADER_BG = "#1e1e1e",
   // PRIMARY = "#0047AB",
-  PRIMARY = "#81DB49",
+  // PRIMARY = "#81DB49",
+  PRIMARY = "#4169E1",
   WHITE = "#ffffff",
   TRANSPARENT = "transparent",
   BLACK = "#000",

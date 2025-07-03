@@ -1,9 +1,9 @@
 :root {
   /* --main-color: #0047ab; */
-  --main-color: #81db49;
-  --point-five: rgba(129, 219, 73, 0.5);
-  --point-three: rgba(129, 219, 73, 0.3);
-  --point-four: rgba(129, 219, 73, 0.4);
+  --main-color: #4169E1;
+  --point-five: #4169e150;
+  --point-three: #4169E150;
+  --point-four: #4169E150;
 }
 
 .cursor {
