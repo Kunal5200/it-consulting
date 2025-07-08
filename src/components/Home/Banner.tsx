@@ -1,6 +1,6 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import banner from "@/homePage/home_banner.png";
+import banner from "@/homePage/home-banner.png";
 import { COLORS } from "@/utils/enum";
 import { ArrowForward } from "@mui/icons-material";
 const Banner = () => {
@@ -60,7 +60,7 @@ const Banner = () => {
           <Grid container mt={2}>
             <Grid size={3.5} margin={"auto"} spacing={10}>
               <Button
-                endIcon={<ArrowForward />}
+                endIcon={<ArrowForward sx={{ color: COLORS.WHITE }} />}
                 sx={{
                   mt: 4,
                 }}

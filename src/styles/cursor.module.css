@@ -1,10 +1,4 @@
-:root {
-  /* --main-color: #0047ab; */
-  --main-color: #4169E1;
-  --point-five: #4169e150;
-  --point-three: #4169E150;
-  --point-four: #4169E150;
-}
+
 
 .cursor {
   position: fixed;
@@ -37,7 +31,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 60px; 
+  width: 60px;
   height: 60px;
   background: transparent;
   border-radius: 50%;

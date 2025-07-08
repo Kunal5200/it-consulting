@@ -17,7 +17,7 @@ const WhoCard = ({ reverse, description, img }: WHO_CARD_PROPS) => {
           width: "200%",
           height: "200%",
           background:
-            "linear-gradient(120deg, transparent,rgba(65, 105, 225, 0.31) , transparent)",
+            "linear-gradient(120deg, transparent,#F96C0A20 , transparent)",
           transform: "rotate(25deg)",
           transition: "all 0.5s ease",
           zIndex: 1,

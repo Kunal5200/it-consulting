@@ -36,3 +36,14 @@ export interface WORK_CARD_PROPS {
   img: StaticImport;
   heading: string;
 }
+
+export interface INSIGHTS_PROPS {
+  title: string;
+  img: StaticImport;
+  category: string;
+}
+
+export interface PAGE_TITLE_PROPS {
+  title: string;
+  subTitle: string;
+}

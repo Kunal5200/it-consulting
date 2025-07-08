@@ -1,15 +1,14 @@
-import Head from "next/head";
-import Image from "next/image";
-import { Geist, Geist_Mono } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-import { Box, Container, Grid } from "@mui/material";
+import { NUMBER_CARD } from "@/assets/numbercard";
 import Banner from "@/components/Home/Banner";
 import NumberCard from "@/components/Home/components/NumberCard";
-import { COLORS } from "@/utils/enum";
-import { NUMBER_CARD } from "@/assets/numbercard";
+import Insights from "@/components/Home/Insights";
 import Services from "@/components/Home/services/Index";
 import WhoWeAre from "@/components/Home/Who-we-are/Index";
 import Work from "@/components/Home/Work";
+import { COLORS } from "@/utils/enum";
+import { Box, Container, Grid } from "@mui/material";
+import { Geist, Geist_Mono } from "next/font/google";
+import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -50,6 +49,7 @@ export default function Home() {
         <Services />
         <WhoWeAre />
         <Work />
+        <Insights />
       </Box>
     </>
   );
