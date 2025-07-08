@@ -48,7 +48,7 @@ const CaseStudyCard = ({ img, heading }: CASE_STUDY_PROPS) => {
       <Box sx={{ position: "absolute", bottom: 20, left: 20 }}>
         <Typography
           sx={{
-            fontSize: 38,
+            fontSize: 30,
             color: COLORS.WHITE,
             fontFamily: "clash-display",
           }}

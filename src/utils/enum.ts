@@ -11,4 +11,5 @@ export enum COLORS {
   GREY = "#4A4A4A",
   LIGHT_GREY = "#939393",
   CIRCLE_GREY = "#B7B7B7",
+  BORDER_COLOR = "#292929",
 }

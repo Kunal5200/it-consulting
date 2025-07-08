@@ -1,5 +1,6 @@
 import PageTitle from "@/components/Home/components/PageTitle";
 import { COLORS } from "@/utils/enum";
+import { loginTextField } from "@/utils/styles";
 import { ArrowForward } from "@mui/icons-material";
 import {
   Button,
@@ -27,7 +28,7 @@ const Contact = () => {
     <Container maxWidth="xl" sx={{ mt: 10 }}>
       <PageTitle title="Contact" subTitle="Get in touch" />
 
-      <Grid container mt={10} mb={10}>
+      <Grid container mt={10} mb={10} alignItems={"center"} spacing={4}>
         <Grid size={6}>
           <Typography
             sx={{
@@ -75,17 +76,58 @@ const Contact = () => {
           >
             drop us a line
           </Typography>
-          <Grid container>
+          <Grid container sx={{ mt: 3 }} spacing={2}>
             <Grid size={6}>
               <TextField
-                sx={{
-                  "& fieldset": {
-                    border: "1px solid #292929",
-                  },
-                }}
+                sx={{ ...loginTextField }}
+                label="First Name*"
+                fullWidth
               />
             </Grid>
-            <Grid size={6}></Grid>
+            <Grid size={6}>
+              <TextField
+                sx={{ ...loginTextField }}
+                label="Last  Name*"
+                fullWidth
+              />
+            </Grid>
+            <Grid size={6}>
+              <TextField sx={{ ...loginTextField }} label="Email*" fullWidth />
+            </Grid>
+            <Grid size={6}>
+              <TextField
+                sx={{ ...loginTextField }}
+                label="Phone Number*"
+                fullWidth
+              />
+            </Grid>
+            <Grid size={12}>
+              <TextField
+                sx={{
+                  ...loginTextField,
+                  "& fieldset": {
+                    height: "100px",
+                  },
+                  "& .MuiOutlinedInput-input": {
+                    height: "100px !important",
+                  },
+                }}
+                label="Message*"
+                fullWidth
+                multiline
+              />
+            </Grid>
+            <Button
+              sx={{
+                fontSize: 17,
+                fontFamily: "clash-display",
+                color: COLORS.WHITE,
+                backgroundColor: COLORS.PRIMARY,
+                width: 150,
+              }}
+            >
+              Send
+            </Button>
           </Grid>
         </Grid>
       </Grid>

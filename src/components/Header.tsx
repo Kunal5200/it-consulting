@@ -1,4 +1,3 @@
-
 import { COLORS } from "@/utils/enum";
 import { Box, Container, Stack, Typography } from "@mui/material";
 import React from "react";
@@ -6,7 +5,8 @@ import logo from "@/logo/logo.png";
 import Image from "next/image";
 import { HEADERLINKS } from "@/assets/headerLinks";
 import { useRouter } from "next/router";
-import logo1 from '@/logo/logo_techx.png'
+import logo1 from "@/logo/logo_techx.png";
+import Link from "next/link";
 const Header = () => {
   const router = useRouter();
   const handleRouter = (url: string) => {
@@ -28,15 +28,16 @@ const Header = () => {
           padding: "25px",
           color: COLORS.WHITE,
           paddingLeft: "25px",
-          
         }}
       >
-        <Image
-          src={logo1}
-          alt="logo"
-          width={250}
-          style={{ backgroundColor: COLORS.TRANSPARENT }}
-        />
+        <Link href={"/"}>
+          <Image
+            src={logo1}
+            alt="logo"
+            width={250}
+            style={{ backgroundColor: COLORS.TRANSPARENT }}
+          />
+        </Link>
         <Stack
           direction={"row"}
           spacing={5}

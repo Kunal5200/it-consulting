@@ -1,7 +1,7 @@
 import banner from "@/homePage/home-banner.png";
 import { COLORS } from "@/utils/enum";
 import { Box, Container, Grid, Typography } from "@mui/material";
-const Banner = () => {
+const Banner = ({}) => {
   return (
     <Box sx={{ backgroundColor: COLORS.BLACK }}>
       <Box
