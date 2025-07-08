@@ -1,15 +1,13 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
-import React from "react";
 import banner from "@/homePage/home-banner.png";
 import { COLORS } from "@/utils/enum";
-import { ArrowForward } from "@mui/icons-material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 const Banner = () => {
   return (
     <Box sx={{ backgroundColor: COLORS.BLACK }}>
       <Box
         sx={{
           backgroundImage: `url(${banner.src})`,
-          height: "100vh",
+          height: "90vh",
           backgroundPosition: "50%",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -19,7 +17,7 @@ const Banner = () => {
         <Container maxWidth="xl">
           <Grid
             container
-            sx={{ paddingTop: 30 }}
+            sx={{ paddingTop: 20 }}
             spacing={10}
             alignItems={"center"}
           >
@@ -57,7 +55,7 @@ const Banner = () => {
             </Grid>
           </Grid>
 
-          <Grid container mt={2}>
+          {/* <Grid container mt={2}>
             <Grid size={3.5} margin={"auto"} spacing={10}>
               <Button
                 endIcon={<ArrowForward sx={{ color: COLORS.WHITE }} />}
@@ -78,7 +76,7 @@ const Banner = () => {
                 </Typography>
               </Button>
             </Grid>
-          </Grid>
+          </Grid> */}
           <Grid container mt={5} spacing={10}>
             <Grid size={4}></Grid>
             <Grid size={5} sx={{ borderLeft: `5px solid ${COLORS.PRIMARY}` }}>

@@ -1,5 +1,6 @@
 import { NUMBER_CARD } from "@/assets/numbercard";
 import Banner from "@/components/Home/Banner";
+import CaseStudy from "@/components/Home/case-study/Case-study";
 import NumberCard from "@/components/Home/components/NumberCard";
 import Insights from "@/components/Home/Insights";
 import Services from "@/components/Home/services/Index";
@@ -49,7 +50,8 @@ export default function Home() {
         <Services />
         <WhoWeAre />
         <Work />
-        <Insights />
+        {/* <Insights /> */}
+        <CaseStudy />
       </Box>
     </>
   );

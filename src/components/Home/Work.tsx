@@ -13,6 +13,7 @@ const WorkSection = () => {
         <SectionTitle
           sectionTitle="work"
           hasButton={router.pathname === "/work" ? false : true}
+          buttonName="All Projects"
         />
         <Grid mt={3} container spacing={4}>
           {WORK_CARD_DATA.map((val, i) => (

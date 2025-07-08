@@ -1,0 +1,27 @@
+import { CASE_STUDY_DATA } from "@/assets/Casestudy";
+import CaseStudyCard from "@/components/common/Case-study-card";
+import { Box, Container, Grid } from "@mui/material";
+import SectionTitle from "../components/Section-Title";
+
+const CaseStudy = () => {
+  return (
+    <Box sx={{ mt: 10 }}>
+      <Container maxWidth="xl">
+        <SectionTitle
+          sectionTitle="Case Study"
+          hasButton={true}
+          buttonName="View More"
+        />
+        <Grid container sx={{ mt: 10 }} spacing={3}>
+          {CASE_STUDY_DATA.map((val, i) => (
+            <Grid size={4}>
+              <CaseStudyCard img={val.img} heading={val.heading} />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Box>
+  );
+};
+
+export default CaseStudy;

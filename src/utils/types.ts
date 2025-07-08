@@ -47,3 +47,8 @@ export interface PAGE_TITLE_PROPS {
   title: string;
   subTitle: string;
 }
+
+export interface BLOG_PROPS {
+  img: string;
+  heading: string;
+}

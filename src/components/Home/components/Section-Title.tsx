@@ -6,10 +6,12 @@ const SectionTitle = ({
   sectionTitle,
   hasButton,
   onClick,
+  buttonName,
 }: {
   sectionTitle: string;
   hasButton?: boolean;
   onClick?: () => void;
+  buttonName?: string;
 }) => {
   return (
     <Box>
@@ -39,7 +41,7 @@ const SectionTitle = ({
             }}
             onClick={onClick}
           >
-            All Projects
+            {buttonName}
           </Button>
         )}
       </Stack>
