@@ -48,9 +48,9 @@ const Banner = ({}) => {
                   //   letterSpacing: 1.2,
                 }}
               >
-                We are a creative agency committed to delivering innovative
-                solutions, from concept to execution, ensuring your brand's
-                success and growth.
+                Everything we do , we do it better. chose your entail from web
+                platforms, native apps, machine learning, immersive tech, and
+                Web3. Code to cloud.
               </Typography>
             </Grid>
           </Grid>
