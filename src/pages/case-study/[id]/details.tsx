@@ -50,6 +50,13 @@ const CaseStudyDetails = () => {
     return () => clearTimeout(timeout);
   }, [id]);
 
+  if (loading) {
+    return (
+      <Backdrop open sx={{zIndex:999,backdropFilter:"blur(10px)"}}>
+        <CircularProgress sx={{ color: COLORS.WHITE }} />
+      </Backdrop>
+    );
+  }
   if (!data) return <div>No data found.</div>;
 
   return (
