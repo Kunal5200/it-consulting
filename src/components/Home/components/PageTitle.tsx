@@ -25,19 +25,20 @@ const PageTitle = ({ title, subTitle }: PAGE_TITLE_PROPS) => {
       >
         {title}
       </Typography>
-      <Box
-        sx={{
-          border: "1px solid #292929",
-          backgroundColor: "#000000b3",
-          borderRadius: "5px",
-          marginLeft: "20px",
-          padding: "7px 9px",
-          color: COLORS.WHITE,
-        }}
-      >
-        {/* Who We are and what we do */}
-        {subTitle}
-      </Box>
+      {subTitle && (
+        <Box
+          sx={{
+            border: "1px solid #292929",
+            backgroundColor: "#000000b3",
+            borderRadius: "5px",
+            marginLeft: "20px",
+            padding: "7px 9px",
+            color: COLORS.WHITE,
+          }}
+        >
+          {subTitle}
+        </Box>
+      )}
     </Box>
   );
 };

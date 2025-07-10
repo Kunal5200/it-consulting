@@ -8,14 +8,14 @@ export const WHO_CARD_DATA: WHO_CARD_PROPS[] = [
   {
     img: mission,
     description:
-      "We are a creative agency committed to delivering innovative solutions, from concept to execution, ensuring your brand's success and growth.",
+      "To deliver working software that solves real problems. We write clean code, design intuitive interfaces, and deploy systems that scale. No smoke and mirrors - just reliable technology that helps businesses grow. Every project, every time.",
     title: "Our",
     subTitle: "Mission",
   },
   {
     img: vision,
     description:
-      "We specialize in transforming your vision into reality, reativity with strategy to produce results. Our team works to elevate your brand",
+      "Become the go-to development partner for companies ready to build seriously good tech. We see a future where businesses choose us not for promises, but for our track record of shipping quality software that actually works.",
     reverse: true,
     title: "Our",
     subTitle: "Vision",

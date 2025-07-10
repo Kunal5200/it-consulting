@@ -1,10 +1,13 @@
-import { Box, Button, Typography } from "@mui/material";
-import React from "react";
-import image from "@/homePage/case/case1.jpg";
 import { COLORS } from "@/utils/enum";
-import { ArrowForward } from "@mui/icons-material";
 import { CASE_STUDY_PROPS } from "@/utils/types";
-const CaseStudyCard = ({ img, heading }: CASE_STUDY_PROPS) => {
+import { ArrowForward } from "@mui/icons-material";
+import { Box, Button, Typography } from "@mui/material";
+import { useRouter } from "next/router";
+const CaseStudyCard = ({ img, heading, id }: CASE_STUDY_PROPS) => {
+  const router = useRouter();
+  const handleDetailPage = (id: string) => {
+    router.push(`/case-study/${id}/details`);
+  };
   return (
     <Box
       sx={{
@@ -63,6 +66,7 @@ const CaseStudyCard = ({ img, heading }: CASE_STUDY_PROPS) => {
           }}
           endIcon={<ArrowForward />}
           className="button_read"
+          onClick={() => handleDetailPage(id)}
         >
           Read More
         </Button>

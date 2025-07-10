@@ -45,10 +45,11 @@ export interface INSIGHTS_PROPS {
 
 export interface PAGE_TITLE_PROPS {
   title: string;
-  subTitle: string;
+  subTitle?: string;
 }
 
 export interface CASE_STUDY_PROPS {
   img: string;
   heading: string;
+  id: string;
 }

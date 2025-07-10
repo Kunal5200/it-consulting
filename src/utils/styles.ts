@@ -14,6 +14,7 @@ export const loginTextField = {
   },
   "& .MuiOutlinedInput-input": {
     fontFamily: "clash-display",
+    color: COLORS.WHITE,
   },
   "& .MuiOutlinedInput-root": {
     "& fieldset": {

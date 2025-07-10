@@ -6,13 +6,17 @@ export const CASE_STUDY_DATA: CASE_STUDY_PROPS[] = [
   {
     img: case1.src,
     heading: "To create an E-Commerce travel website for Client.",
+    id: "ecommerce",
   },
   {
     img: case2.src,
     heading: "Unified Appointment Hub for Businesses and Consumers",
+    id: "appointement-hub",
   },
   {
     img: case3.src,
-    heading: "Global Expansion of India's Premier Ethnic Wear Brand with NRI Focus",
+    heading:
+      "Global Expansion of India's Premier Ethnic Wear Brand with NRI Focus",
+    id: "ethnic-wear-brands",
   },
 ];

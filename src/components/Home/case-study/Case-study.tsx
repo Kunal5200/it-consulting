@@ -15,7 +15,7 @@ const CaseStudy = () => {
         <Grid container sx={{ mt: 10 }} spacing={3}>
           {CASE_STUDY_DATA.map((val, i) => (
             <Grid size={4}>
-              <CaseStudyCard img={val.img} heading={val.heading} />
+              <CaseStudyCard img={val.img} heading={val.heading} id={val.id} />
             </Grid>
           ))}
         </Grid>
