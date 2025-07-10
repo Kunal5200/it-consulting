@@ -21,7 +21,7 @@ const CaseStudyCard = ({ img, heading, id }: CASE_STUDY_PROPS) => {
             textDecoration: "underline",
           },
           ".overlay": {
-            backgroundColor: "#00000080",
+            backgroundColor: "#00000095",
           },
         },
         borderRadius: "10px",
@@ -51,7 +51,7 @@ const CaseStudyCard = ({ img, heading, id }: CASE_STUDY_PROPS) => {
       <Box sx={{ position: "absolute", bottom: 20, left: 20 }}>
         <Typography
           sx={{
-            fontSize: 30,
+            fontSize: 25,
             color: COLORS.WHITE,
             fontFamily: "clash-display",
           }}

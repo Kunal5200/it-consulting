@@ -1,10 +1,22 @@
-import { Ecommerce } from "@/assets/case-study/Ecommerce";
+import {
+  appointmentHub,
+  Ecommerce,
+  ethnicWear,
+  migrateBusiness,
+  upgradeServer,
+} from "@/assets/case-study/Ecommerce";
+import { CASE_STUDY_DATA } from "@/assets/Casestudy";
+import CaseStudyCard from "@/components/common/Case-study-card";
+import InsightCard from "@/components/common/InsightCard";
 import PageTitle from "@/components/Home/components/PageTitle";
 import { COLORS } from "@/utils/enum";
 import { loginTextField } from "@/utils/styles";
+import { CASE_STUDY_DETAILS } from "@/utils/types";
 import { AcUnit, Search } from "@mui/icons-material";
 import {
+  Backdrop,
   Box,
+  CircularProgress,
   Container,
   Grid,
   IconButton,
@@ -13,34 +25,43 @@ import {
   ListItem,
   ListItemAvatar,
   ListItemText,
+  Stack,
   TextField,
   Typography,
 } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
+import { StaticImageData } from "next/image";
 
 const CaseStudyDetails = () => {
   const router = useRouter();
 
-  console.log("router", router);
   const { id } = router.query;
-  const [data, setData] = useState<typeof Ecommerce | null>(null);
+  const [data, setData] = useState<CASE_STUDY_DETAILS | null | undefined>(null);
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    if (id === "ecommerce") {
-      setData(Ecommerce);
-    }
+    setLoading(true);
+    const timeout = setTimeout(() => {
+      const newData = CASE_STUDY_DATA.find((val) => val.id === id);
+      setData(newData?.details);
+      setLoading(false);
+    }, 2000);
+    return () => clearTimeout(timeout);
   }, [id]);
 
-  console.log("data", data);
-  if (!data) return null;
+  if (!data) return <div>No data found.</div>;
+
   return (
     <Box>
+      <Backdrop open={loading} sx={{zIndex:999,backdropFilter:"blur(10px)"}}>
+        <CircularProgress sx={{ color: COLORS.WHITE }} />
+      </Backdrop>
       <Container maxWidth="xl">
         <Box sx={{ mt: 10 }}>
-          <PageTitle title={data.heading} />
+          <PageTitle title={data.heading ?? ""} />
         </Box>
-        <Grid container mb={6}>
+        <Grid container mb={6} spacing={4}>
           <Grid size={8}>
             <Box
               sx={{
@@ -62,8 +83,8 @@ const CaseStudyDetails = () => {
               </Typography>
             </Box>
             <Image
-              src={data.img}
-              alt={data.heading}
+              src={data.img ?? ""}
+              alt={data.heading ?? ""}
               style={{ width: "100%", height: 600 }}
             />
             <Typography sx={{ fontFamily: "clash-display", mt: 2 }}>
@@ -175,7 +196,7 @@ const CaseStudyDetails = () => {
                 slotProps={{
                   input: {
                     endAdornment: (
-                      <InputAdornment position="end" sx={{p:0}}>
+                      <InputAdornment position="end" sx={{ p: 0 }}>
                         <IconButton
                           sx={{
                             backgroundColor: COLORS.PRIMARY,
@@ -196,6 +217,21 @@ const CaseStudyDetails = () => {
                 sx={{ ...loginTextField }}
                 fullWidth
               />
+              <Stack spacing={3}>
+                {CASE_STUDY_DATA.map((val, i) => (
+                  <CaseStudyCard
+                    img={val.img}
+                    heading={val.heading}
+                    id={val.id}
+                    details={val.details}
+                  />
+                  // <InsightCard
+                  //   img={val.details.img ?? ""}
+                  //   title={val.heading}
+                  //   category=""
+                  // />
+                ))}
+              </Stack>
             </Box>
           </Grid>
         </Grid>

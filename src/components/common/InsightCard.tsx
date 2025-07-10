@@ -5,7 +5,10 @@ import Image from "next/image";
 import React from "react";
 import insightImage from "@/homePage/insights/post1.jpg";
 import { INSIGHTS_PROPS } from "@/utils/types";
+import { useRouter } from "next/router";
 const InsightCard = ({ category, title, img }: INSIGHTS_PROPS) => {
+  const router = useRouter();
+
   return (
     <Box
       sx={{
@@ -13,7 +16,8 @@ const InsightCard = ({ category, title, img }: INSIGHTS_PROPS) => {
         borderRadius: "5px",
         display: "flex",
         alignItems: "center",
-        padding: "20px",
+        padding:
+          router.pathname === "/case-study/[id]/details" ? "5px" : "20px",
         position: "relative",
         overflow: "hidden",
         transition: "transform 0.3s ease, box-shadow 0.3s ease",
@@ -48,32 +52,35 @@ const InsightCard = ({ category, title, img }: INSIGHTS_PROPS) => {
             transform: "scale(1.05)",
           },
           boxShadow: `{0 0 5px ${COLORS.PRIMARY}}`,
-          border:`1px solid ${COLORS.PRIMARY}`
+          border: `1px solid ${COLORS.PRIMARY}`,
           //   transform: "scale(1.03) translateY(-4px)",
         },
         mt: 5,
       }}
     >
       <Box>
-        <Box
-          sx={{
-            border: `1px solid ${COLORS.PRIMARY}`,
-            color: COLORS.WHITE,
-            borderRadius: "10px",
-            padding: "7px 16px",
-            opacity: "0.7",
-            transform: "translateY(15px)",
-            transition: "all 0.5s ease",
-            width: 100,
-          }}
-        >
-          {category}
-        </Box>
+        {category && (
+          <Box
+            sx={{
+              border: `1px solid ${COLORS.PRIMARY}`,
+              color: COLORS.WHITE,
+              borderRadius: "10px",
+              padding: "7px 16px",
+              opacity: "0.7",
+              transform: "translateY(15px)",
+              transition: "all 0.5s ease",
+              width: 100,
+            }}
+          >
+            {category}
+          </Box>
+        )}
         <Typography
           sx={{
             color: COLORS.WHITE,
             width: "90%",
-            fontSize: "40px",
+            fontSize:
+              router.pathname === "/case-study/[id]/details" ? "14px" : "40px",
             fontWeight: 500,
             lineHeight: "44px",
             mt: "35px",
@@ -88,8 +95,8 @@ const InsightCard = ({ category, title, img }: INSIGHTS_PROPS) => {
             backgroundColor: "#333333",
             borderRadius: "50%",
             justifyContent: "center",
-            width: 55,
-            height: 55,
+            width: router.pathname === "/case-study/[id]/details" ? 40 : 55,
+            height: router.pathname === "/case-study/[id]/details" ? 40 : 55,
             display: "flex",
             alignItems: "center",
             mt: 2,
@@ -107,8 +114,9 @@ const InsightCard = ({ category, title, img }: INSIGHTS_PROPS) => {
       <Box
         sx={{
           borderRadius: "5px",
-          width: "420px",
-          height: 280,
+          width:
+            router.pathname === "/case-study/[id]/details" ? "180px" : "420px",
+          height: router.pathname === "/case-study/[id]/details" ? 120 : 280,
           margin: "auto",
           display: "flex",
           alignItems: "center",

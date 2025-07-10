@@ -1,4 +1,7 @@
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import {
+  StaticImageData,
+  StaticImport,
+} from "next/dist/shared/lib/get-img-props";
 import { ReactNode } from "react";
 
 export interface LAYOUT_PROPS {
@@ -35,12 +38,13 @@ export interface WHO_CARD_PROPS {
 export interface WORK_CARD_PROPS {
   img: StaticImport;
   heading: string;
+  id: string;
 }
 
 export interface INSIGHTS_PROPS {
   title: string;
-  img: StaticImport;
-  category: string;
+  img: StaticImport | string;
+  category?: string;
 }
 
 export interface PAGE_TITLE_PROPS {
@@ -52,4 +56,29 @@ export interface CASE_STUDY_PROPS {
   img: string;
   heading: string;
   id: string;
+  details: CASE_STUDY_DETAILS;
+}
+
+export interface LIST {
+  label?: string;
+  value?: string;
+}
+
+export interface CASE_STUDY_DETAILS {
+  img?: StaticImageData;
+  heading?: string;
+  aboutDescription: string;
+  solution: {
+    heading: string;
+    list: LIST[];
+  };
+  businessProblem: {
+    heading: string;
+    list: LIST[];
+  };
+  keyBenefits: {
+    heading: string;
+    list: LIST[];
+  };
+  techStack: [string];
 }

@@ -4,7 +4,13 @@ import work1 from "@/homePage/work/img1.png";
 import Image from "next/image";
 import { COLORS } from "@/utils/enum";
 import { WORK_CARD_PROPS } from "@/utils/types";
-const WorkCard = ({ img, heading }: WORK_CARD_PROPS) => {
+import { useRouter } from "next/router";
+const WorkCard = ({ img, heading, id }: WORK_CARD_PROPS) => {
+  const router = useRouter();
+
+  const handleChangePage = (id: string) => {
+    router.push(`/work/${id}/project-details`);
+  };
   return (
     <Box
       sx={{
@@ -31,7 +37,7 @@ const WorkCard = ({ img, heading }: WORK_CARD_PROPS) => {
             opacity: 1,
           },
           ".img": {
-            scale: 1.1,
+            scale: 1.05,
           },
           ".text": {
             opacity: 1,
@@ -79,6 +85,7 @@ const WorkCard = ({ img, heading }: WORK_CARD_PROPS) => {
           transition: "all 0.5s ease 0.2s",
         }}
         className="button_heading"
+        onClick={()=>handleChangePage(id)}
       >
         Branding
       </Button>
