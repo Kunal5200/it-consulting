@@ -14,7 +14,7 @@ const WhoWeAre = () => {
         <Box sx={{ mt: 4 }}>
           <Grid container spacing={6}>
             {WHO_CARD_DATA.map((val, i) => (
-              <Grid size={6}>
+              <Grid size={{lg:6,xs:12}}>
                 <WhoTitle
                   title={val.title ?? ""}
                   subTitle={val.subTitle ?? ""}

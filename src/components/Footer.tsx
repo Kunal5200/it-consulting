@@ -38,7 +38,7 @@ const Footer = () => {
           }}
         >
           <Grid container>
-            <Grid size={8} margin={"auto"}>
+            <Grid size={{lg:8,xs:12}} margin={"auto"}>
               <Box sx={{ textAlign: "center" }}>
                 <Button
                   sx={{
@@ -66,7 +66,7 @@ const Footer = () => {
 
               <Box sx={{ mt: 4 }}>
                 <Stack
-                  direction={"row"}
+                  direction={{lg:"row",xs:"column"}}
                   alignItems={"center"}
                   justifyContent={"center"}
                   spacing={3}

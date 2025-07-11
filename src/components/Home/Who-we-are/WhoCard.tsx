@@ -1,13 +1,14 @@
 import { COLORS } from "@/utils/enum";
 import { WHO_CARD_PROPS } from "@/utils/types";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Stack, Typography, useMediaQuery } from "@mui/material";
 import Image from "next/image";
 const WhoCard = ({ reverse, description, img }: WHO_CARD_PROPS) => {
+  const phone = useMediaQuery("(max-width:600px)");
   return (
     <Box
       sx={{
-        width: "600px",
-        height: "350px",
+        width: { lg: "600px", xs: "350px" },
+        height: { lg: "350px", xs: "800px" },
         border: "1px solid #292929",
         ":after": {
           content: "''",
@@ -43,14 +44,14 @@ const WhoCard = ({ reverse, description, img }: WHO_CARD_PROPS) => {
         flexDirection={reverse ? "row-reverse" : "row"}
         spacing={2}
       >
-        <Grid size={7}>
+        <Grid size={{ lg: 7, xs: 12 }}>
           <Stack flexDirection={reverse ? "column-reverse" : "column"}>
             <Typography
               sx={{
                 color: COLORS.WHITE,
                 fontSize: 22,
                 fontFamily: "clash-display",
-                marginBottom: reverse ? 0 : "100px",
+                marginBottom: reverse ? 0 : { lg: "100px", xs: "50px" },
                 lineHeight: "28px",
               }}
             >
@@ -69,11 +70,11 @@ const WhoCard = ({ reverse, description, img }: WHO_CARD_PROPS) => {
             ></Box>
           </Stack>
         </Grid>
-        <Grid size={5}>
+        <Grid size={{ lg: 5, xs: 12 }}>
           <Image
             src={img}
             alt="who we are"
-            width={240}
+            width={phone ? 350 : 240}
             style={{ borderRadius: "10px" }}
           />
         </Grid>

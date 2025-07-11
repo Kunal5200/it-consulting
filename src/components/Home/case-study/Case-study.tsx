@@ -19,7 +19,7 @@ const CaseStudy = () => {
         {router.pathname === "/" ? (
           <Grid container sx={{ mt: 10 }} spacing={3}>
             {CASE_STUDY_DATA.slice(0, 3).map((val, i) => (
-              <Grid size={4}>
+              <Grid size={{ lg: 4, xs: 12 }}>
                 <CaseStudyCard
                   img={val.img}
                   heading={val.heading}
@@ -32,7 +32,7 @@ const CaseStudy = () => {
         ) : (
           <Grid container sx={{ mt: 10 }} spacing={3}>
             {CASE_STUDY_DATA.map((val, i) => (
-              <Grid size={4}>
+              <Grid size={{ lg: 4, xs: 12 }}>
                 <CaseStudyCard
                   img={val.img}
                   heading={val.heading}

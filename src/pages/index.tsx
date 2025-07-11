@@ -35,7 +35,7 @@ export default function Home() {
         <Container maxWidth="xl" sx={{ mt: 5 }}>
           <Grid container spacing={3}>
             {NUMBER_CARD.map((val, i) => (
-              <Grid size={3}>
+              <Grid size={{ lg: 3, xs: 12 }}>
                 <NumberCard
                   title={val.title}
                   bgColor={val.bgColor}

@@ -7,7 +7,7 @@ const Banner = ({}) => {
       <Box
         sx={{
           backgroundImage: `url(${banner.src})`,
-          height: "90vh",
+          height: { lg: "90vh", xs: "150vh" },
           backgroundPosition: "50%",
           backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
@@ -17,11 +17,11 @@ const Banner = ({}) => {
         <Container maxWidth="xl">
           <Grid
             container
-            sx={{ paddingTop: 20 }}
+            sx={{ paddingTop: { lg: 20, xs: 10 } }}
             spacing={10}
             alignItems={"center"}
           >
-            <Grid size={4}>
+            <Grid size={{ lg: 4, xs: 12 }}>
               <Typography
                 sx={{
                   fontSize: 120,
@@ -35,8 +35,23 @@ const Banner = ({}) => {
               >
                 AIM
               </Typography>
+
+              <Typography
+                sx={{
+                  fontSize: 120,
+                  color: COLORS.WHITE,
+                  textTransform: "uppercase",
+                  //   fontWeight: "900 !important",
+                  fontFamily: "clash-bold",
+                  lineHeight: "100px",
+                  letterSpacing: 1.2,
+                  display: { lg: "none", xs: "block" },
+                }}
+              >
+                SKY
+              </Typography>
             </Grid>
-            <Grid size={5}>
+            <Grid size={{ lg: 5, xs: 12 }}>
               <Typography
                 sx={{
                   fontSize: 20,
@@ -79,7 +94,10 @@ const Banner = ({}) => {
           </Grid> */}
           <Grid container mt={5} spacing={10}>
             <Grid size={4}></Grid>
-            <Grid size={5} sx={{ borderLeft: `5px solid ${COLORS.PRIMARY}` }}>
+            <Grid
+              size={{ lg: 5, xs: 12 }}
+              sx={{ borderLeft: `5px solid ${COLORS.PRIMARY}` }}
+            >
               <Box sx={{ paddingLeft: "30px" }}>
                 <Typography
                   sx={{
@@ -113,6 +131,7 @@ const Banner = ({}) => {
                   fontFamily: "clash-bold",
                   lineHeight: "100px",
                   letterSpacing: 1.2,
+                  display: { xs: "none", lg: "block" },
                 }}
               >
                 sky

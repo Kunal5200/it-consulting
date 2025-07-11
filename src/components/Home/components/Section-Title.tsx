@@ -24,7 +24,7 @@ const SectionTitle = ({
           sx={{
             textTransform: "uppercase",
             marginTop: 0,
-            fontSize: 80,
+            fontSize: {lg:80,xs:40},
             fontWeight: 800,
             lineHeight: "50px",
             color: COLORS.WHITE,

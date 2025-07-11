@@ -10,18 +10,19 @@ const ServicesCard = ({ index, serviceTitle, img }: SERVICE_DETAILS) => {
   return (
     <Box>
       <Stack
-        direction={"row"}
+        direction={{ lg: "row", xs: "column" }}
         alignItems={"center"}
         justifyContent={"space-between"}
         onMouseOver={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         sx={{ pb: 5, pt: 5 }}
+        spacing={{xs:4}}
       >
         <Stack
           direction={"row"}
           alignItems={"center"}
           spacing={4}
-          sx={{ width: 600 }}
+          sx={{ width: { lg: 600, xs: "100%" } }}
         >
           <Box
             sx={{
@@ -41,7 +42,7 @@ const ServicesCard = ({ index, serviceTitle, img }: SERVICE_DETAILS) => {
             <Typography
               sx={{
                 color: COLORS.WHITE,
-                fontSize: 20,
+                fontSize: {lg:20,xs:15},
                 fontFamily: "clash-display",
               }}
             >
@@ -52,7 +53,7 @@ const ServicesCard = ({ index, serviceTitle, img }: SERVICE_DETAILS) => {
             sx={{
               textTransform: "uppercase",
               fontFamily: "clash-display",
-              fontSize: 40,
+              fontSize: {lg:40,xs:25},
               lineHeight: "50px",
               fontWeight: 200,
               color: COLORS.WHITE,
@@ -63,7 +64,7 @@ const ServicesCard = ({ index, serviceTitle, img }: SERVICE_DETAILS) => {
         </Stack>
         <Box
           sx={{
-            width: 600,
+            width: { lg: 600, xs: 350 },
             height: 200,
             borderRadius: "10px",
             position: "relative",
