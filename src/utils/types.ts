@@ -39,6 +39,12 @@ export interface WORK_CARD_PROPS {
   img: StaticImport;
   heading: string;
   id: string;
+  details: Work_card_details;
+}
+
+export interface Work_card_details {
+  heading: string;
+  description: string;
 }
 
 export interface INSIGHTS_PROPS {

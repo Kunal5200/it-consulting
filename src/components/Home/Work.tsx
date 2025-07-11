@@ -18,7 +18,12 @@ const WorkSection = () => {
         <Grid mt={3} container spacing={4}>
           {WORK_CARD_DATA.map((val, i) => (
             <Grid size={6} key={i}>
-              <WorkCard heading={val.heading} img={val.img} id={val.id} />
+              <WorkCard
+                heading={val.heading}
+                img={val.img}
+                id={val.id}
+                details={val.details}
+              />
             </Grid>
           ))}
         </Grid>
